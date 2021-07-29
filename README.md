@@ -1,6 +1,10 @@
 # tamabot
-the tamabot is an experimental discord bot, created for the first time by me.
-my goal is to give it as many features as possible but im starting with some simple steps.
-currently it is capable of answering prompts but i will make a currency system, music player, minigames, image generation, etc for fun.
 
-currently developed by icybe & jonanners
+tamabot is a discord bot, currently experimental and newly made.
+
+my goal is to give it as many features as possible such as currency system, music player, image generation, etc. for fun.
+(similar to dankmemer bot)
+
+at the moment, it answers to prompts and such, so i will keep developing it as it is funny and exciting.
+
+currently developed by icybe and jonanner
