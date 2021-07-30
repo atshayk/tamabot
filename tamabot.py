@@ -25,7 +25,7 @@ async def on_message(message):
         if user_message.lower() == 'hello':
             await message.channel.send(f'sup {username}, you son of a bitch!')
             return
-        if user_message.lower() == 'hi':
+        elif user_message.lower() == 'hi':
             await message.channel.send(f'sup {username}, you son of a bitch!')
             return
         elif user_message.lower() == '!joke':
