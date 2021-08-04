@@ -1,11 +1,13 @@
 # tamabot.py
+# version 0.2.1 dated 04/08/2021
 
 import discord
+from discord.ext import commands
 import random
 
 TOKEN = "ODcwMjk1MzIzNDAxMTI1OTQ4.YQKrrg.swNkHUabcy0q2nN2Yi0gUBA7YVw"
 
-client = discord.Client()
+client = commands.Bot(command_prefix = ">")
 
 @client.event
 async def on_ready():
@@ -13,6 +15,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    await client.process_commands(message)
     username = str(message.author).split('#')[0]
     user_message = str(message.content)
     channel = str(message.channel.name)
@@ -20,31 +23,33 @@ async def on_message(message):
 
     if message.author == client.user:
         return
+
     a = 0
     if a == 0:
-        if user_message.lower() == 'hello':
-            await message.channel.send(f'sup {username}, you son of a bitch!')
+        if user_message.lower() == 'hi':
+            await message.channel.send(f'sup {username}')
             return
-        elif user_message.lower() == 'hi':
-            await message.channel.send(f'sup {username}, you son of a bitch!')
+        elif user_message.lower() == 'hello':
+            await message.channel.send(f'sup {username}')
             return
-        elif user_message.lower() == '!joke':
-            await message.channel.send(f"you're the joke stupid bitch")
+        elif user_message.lower() == 'sup':
+            await message.channel.send(f'sup back at u, {username}')
             return
         elif user_message.lower() == 'bye':
             await message.channel.send(f'fuck off wanker!')
             return
-        elif user_message.lower() == '!random':
-            response = f'This is your random number: {random.randrange(1000000)}'
-            await message.channel.send(response)
-            return
         elif user_message.lower() == 'also':
-            await message.channel.send(f"also also, fucking bitch go marry tama stupid ass")
+            await message.channel.send(f"also also, shut the fuck up bro no one cares, go marry tama stupid bitch")
             return
 
-    if user_message.lower() == '!anywhere':
-        await message.channel.send('this can be used anywhere')
-        return
+#commands
+@client.command()
+async def greet(ctx):
+    username_cmd = str(ctx.author).split("#")[0]
+    await ctx.send(f"sup {username_cmd}")
 
+@client.command()
+async def joke(ctx):
+    await ctx.send("you're the joke stupid bitch")
 
 client.run(TOKEN)
