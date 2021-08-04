@@ -15,6 +15,4 @@ Now it can respond to messages and commands without any bugs.
 follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
 
 <h2> devs </h2>
-@icybe
-
-@JoNanners
+developed by @icybe and @JoNanners
