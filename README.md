@@ -18,4 +18,6 @@ the next update will be 0.2.2 that will be adding more commands, releasing on th
 follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
 
 <h2> devs </h2>
-developed by @icybe (aka tama) and @JoNanners (jo)
+developed by 
+@icybe (aka tama)
+@JoNanners (jo)
