@@ -21,4 +21,5 @@ follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
 developed by 
 
 @icybe (aka tama)
+
 @JoNanners (jo)
