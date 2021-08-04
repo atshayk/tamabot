@@ -19,5 +19,7 @@ follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
 
 <h2> devs </h2>
 developed by 
+
 @icybe (aka tama)
+
 @JoNanners (jo)
