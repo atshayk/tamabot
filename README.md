@@ -16,4 +16,5 @@ follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
 
 <h2> devs </h2>
 @icybe
+
 @JoNanners
