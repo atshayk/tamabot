@@ -12,7 +12,7 @@ UPDATE 0.2.1 has been added to the bot!
 Now it can respond to messages and commands without any bugs.
 
 <h2> next update? </h2>
-the next update will be 0.2.2 that will be adding more commands, to be added on the weekend.
+the next update will be 0.2.2 that will be adding more commands, releasing on the weekend (7-8 Aug)
 
 <h2> roadmap </h2>
 follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
