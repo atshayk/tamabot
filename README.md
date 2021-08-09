@@ -7,12 +7,12 @@ my goal is to give it as many features as possible such as currency system, musi
 (similar to dankmemer bot and other multipurpose bots)
 
 <h2> updates </h2>
-UPDATE 0.2.1 has been added to the bot!
+UPDATE 0.2.2 has been added to the bot!
 
-Now it can respond to messages and commands without any bugs.
+The bot is now hosted online, so it will be up indefinitely. Hopefully. Lol.
 
 <h2> next update? </h2>
-the next update will be 0.2.2 that will be hosting the bot online, it will come out hopefully by 11th Aug.
+The next update will be 0.2.3 which will introduce some more commands, to be out by this week.
 
 <h2> roadmap </h2>
 follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
