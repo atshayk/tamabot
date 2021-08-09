@@ -1,6 +1,8 @@
+#tamabot
+#version v0.2.2 09/08/2021
+
 from discord.ext import commands
 from webserver import keep_alive
-
 import os
 
 
@@ -39,6 +41,7 @@ async def on_message(message):
             await message.channel.send(f"also also, shut the fuck up bro no one cares, go marry tama stupid bitch")
             return
 
+#commands
 @client.command()
 async def greet(ctx):
     username_cmd = str(ctx.author).split("#")[0]
@@ -48,7 +51,7 @@ async def greet(ctx):
 async def joke(ctx):
     await ctx.send("you're the joke stupid bitch")
 
-
+#hosting
 keep_alive()
 my_secret = os.environ['TOKEN']
 
