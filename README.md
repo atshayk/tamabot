@@ -14,7 +14,7 @@ The bot is now hosted online, so it will be up indefinitely. Hopefully. Lol.
 Downtime will happen as we are hosting it for FREE. Do not worry, it should get back up in a few minutes or so.
 
 <h2> next update? </h2>
-The next update will be 0.2.3 which will introduce some more commands, to be out by this week.
+The next update will be 0.2.3 which will introduce embeds and more commands, to be out by this week.
 
 <h2> roadmap </h2>
 follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
