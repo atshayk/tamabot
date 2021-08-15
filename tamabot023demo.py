@@ -64,6 +64,12 @@ async def on_message(message):
         elif user_message.lower() == 'heck':
             await message.channel.send(f'watch your fucking language, {username}')
             return
+        elif user_message.lower() == 'where are you':
+            await message.channel.send(f'in yo mama')
+            return
+        elif user_message.lower() == 'fuck off':
+            await message.channel.send(f'little baby bitch cannot handle me lol')
+            return
         
 
 @client.event
