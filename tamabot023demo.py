@@ -84,20 +84,24 @@ client.loop.create_task(status_cycle())
 
 #commands
 @client.command()
+@commands.cooldown(1, 10, commands.BucketType.user)
 async def greet(ctx):
     username_cmd = str(ctx.author).split("#")[0]
     await ctx.send(f"sup {username_cmd}")
 
 @client.command()
+@commands.cooldown(1, 10, commands.BucketType.user)
 async def joke(ctx):
     await ctx.send("you're the joke stupid bitch")
   
 @client.command()
+@commands.cooldown(1, 10, commands.BucketType.user)
 async def gun(ctx):
   username_cmd = str(ctx.author).split("#")[0]
   await ctx.send(f"{username_cmd} phat se headshot")
 
 @client.command()
+@commands.cooldown(1, 10, commands.BucketType.user)
 async def dm(ctx):
   await ctx.message.author.send("im not a girl sorry")
 
