@@ -47,7 +47,7 @@ async def on_message(message):
 @client.event
 async def status_cycle():
     await client.wait_until_ready()
-    statuses = ["a game", f"on {len(client.guilds)} servers | >help", "your mom"]
+    statuses = [f"on {len(client.guilds)} servers | >help", "with your mom", ">help", "with and feeding on the souls of the innocent"]
     while not client.is_closed():
         status = random.choice(statuses)
         await client.change_presence(activity=discord.Game(name=status))
