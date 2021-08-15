@@ -43,6 +43,28 @@ async def on_message(message):
         elif user_message.lower() == 'also':
             await message.channel.send(f"also also, shut the fuck up bro no one cares, go marry tama stupid bitch")
             return
+        elif user_message.lower() == 'what are you':
+            await message.channel.send(f"what do you think bitch")
+            return
+        elif user_message.lower() == 'fuck you':
+            await message.channel.send(f'we do not care')
+            return
+        elif user_message.lower() == 'yo':
+            await message.channel.send(f'yoyo mr mayo')
+            return
+        elif user_message.lower() == 'what am i?':
+            await message.channel.send(f'my little bitch')
+            return
+        elif user_message.lower() == 'who are you':
+            await message.channel.send(f'bot, tamabot.')
+            return
+        elif user_message.lower() == 'naruto':
+            await message.channel.send(f'DATTEBAYO')
+            return
+        elif user_message.lower() == 'heck':
+            await message.channel.send(f'watch your fucking language, {username}')
+            return
+        
 
 @client.event
 async def status_cycle():
