@@ -47,13 +47,12 @@ async def on_message(message):
 @client.event
 async def status_cycle():
     await client.wait_until_ready()
-    statuses = [f"on {len(client.guilds)} servers | >help", "with your mom", ">help", "with and feeding on the souls of the innocent"]
+    statuses = [f"on {len(client.guilds)} servers | >help","with your mom",">help", "with and feeding on the souls of the innocent"]
     while not client.is_closed():
         status = random.choice(statuses)
         await client.change_presence(activity=discord.Game(name=status))
         await asyncio.sleep(10)
 client.loop.create_task(status_cycle())
-
 
 #commands
 @client.command()
@@ -64,6 +63,15 @@ async def greet(ctx):
 @client.command()
 async def joke(ctx):
     await ctx.send("you're the joke stupid bitch")
+  
+@client.command()
+async def gun(ctx):
+  username_cmd = str(ctx.author).split("#")[0]
+  await ctx.send(f"{username_cmd} phat se headshot")
+
+@client.command()
+async def dm(ctx):
+  await ctx.message.author.send("im not a girl sorry")
 
 #hosting
 keep_alive()
