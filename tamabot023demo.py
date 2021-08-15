@@ -41,7 +41,7 @@ async def on_message(message):
             await message.channel.send(f'fuck off wanker!')
             return
         elif user_message.lower() == 'also':
-            await message.channel.send(f"also also, shut the fuck up bro no one cares, go marry tama stupid bitch")
+            await message.channel.send(f"also also, shut the fuck up bro no one cares")
             return
         elif user_message.lower() == 'what are you':
             await message.channel.send(f"what do you think bitch")
