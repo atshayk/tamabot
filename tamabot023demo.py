@@ -71,7 +71,7 @@ async def on_message(message):
             await message.channel.send(f'little baby bitch cannot handle me lol')
             return
         
-
+#bot status        
 @client.event
 async def status_cycle():
     await client.wait_until_ready()
