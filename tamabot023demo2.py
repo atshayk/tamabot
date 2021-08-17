@@ -1,5 +1,5 @@
 #tamabot
-#version v0.2.3 demo 15/08/2021
+#version v0.2.3 demo 16/08/2021
 
 import discord
 from discord.ext import commands
@@ -8,15 +8,17 @@ import os
 import random
 import asyncio
 
-
+#bot command
 client = commands.Bot(command_prefix = ">")
 
+#logging in the bot
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
+#bot responses
 @client.event
-@commands.cooldown(1, 10, commands.BucketType.user)
+@commands.cooldown(1, 10, commands.BucketType.user) #non-functional atm
 async def on_message(message):
     await client.process_commands(message)
     username = str(message.author).split('#')[0]
@@ -69,7 +71,7 @@ async def on_message(message):
             await message.channel.send(f'little baby bitch cannot handle me lol')
             return
         
-#bot status        
+#bot status cycle        
 @client.event
 async def status_cycle():
     await client.wait_until_ready()
