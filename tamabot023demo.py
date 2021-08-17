@@ -105,10 +105,19 @@ async def gun(ctx):
 async def dm(ctx):
   await ctx.message.author.send("im not a girl sorry")
 
+#EMBED SAMPLE
 @client.command()
 async def embed(ctx):
-  embed=discord.Embed(title="Click me for a surprise!", url="https://www.youtube.com/watch?v=dQw4w9WgXcQ",description="Click the link, Fool", color=discord.Color.gold())
-  embed.set_author(name="[REDACTED]",icon_url="https://art.pixilart.com/284dd75b8ac19a4.png?v=1487022662")
+  embed=discord.Embed(
+  title="Click me for a surprise!",
+  url="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  description="Click the link, Fool",
+  color=discord.Color.gold())
+
+  embed.set_author(
+  name="[REDACTED]",
+  icon_url="https://art.pixilart.com/284dd75b8ac19a4.png?v=1487022662")
+
   await ctx.send(embed=embed)
 
 
