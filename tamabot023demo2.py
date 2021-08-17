@@ -45,6 +45,12 @@ async def status_cycle():
 client.loop.create_task(status_cycle())
 
 #commands
+@client.event
+async def on_command_error(ctx, error,):
+    if isinstance(error, commands.CommandOnCooldown):
+      error = (':exclamation: This command is on cooldown, please try again in {:.1f}s :exclamation:').format(error.retry_after)
+      await ctx.send(error)
+
 @client.command()
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def greet(ctx):
