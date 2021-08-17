@@ -5,6 +5,7 @@ import discord
 from discord.ext import commands
 from webserver import keep_alive
 import os
+import time
 import random
 import asyncio
 
@@ -18,59 +19,20 @@ async def on_ready():
 
 #bot responses
 @client.event
-@commands.cooldown(1, 10, commands.BucketType.user) #non-functional atm
 async def on_message(message):
-    await client.process_commands(message)
-    username = str(message.author).split('#')[0]
-    user_message = str(message.content)
-    channel = str(message.channel.name)
-    print(f'{username}: {user_message} ({channel})')
+  await client.process_commands(message)
+  username = str(message.author).split('#')[0]
+  user_message = str(message.content)
+  channel = str(message.channel.name)
+  print(f'{username}: {user_message} ({channel})')
 
-    if message.author == client.user:
-        return
-    if user_message.lower() == 'hi':
-            await message.channel.send(f'sup {username}')
-            return
-    elif user_message.lower() == 'hello':
-            await message.channel.send(f'sup {username}')
-            return
-    elif user_message.lower() == 'sup':
-            await message.channel.send(f'sup back at u, {username}')
-            return
-    elif user_message.lower() == 'bye':
-            await message.channel.send(f'fuck off wanker!')
-            return
-    elif user_message.lower() == 'also':
-            await message.channel.send(f"also also, shut the fuck up bro no one cares")
-            return
-    elif user_message.lower() == 'what are you':
-            await message.channel.send(f"what do you think bitch")
-            return
-    elif user_message.lower() == 'fuck you':
-            await message.channel.send(f'we do not care')
-            return
-    elif user_message.lower() == 'yo':
-            await message.channel.send(f'yoyo mr mayo')
-            return
-    elif user_message.lower() == 'what am i?':
-            await message.channel.send(f'my little bitch')
-            return
-    elif user_message.lower() == 'who are you':
-            await message.channel.send(f'bot, tamabot.')
-            return
-    elif user_message.lower() == 'naruto':
-            await message.channel.send(f'DATTEBAYO')
-            return
-    elif user_message.lower() == 'heck':
-            await message.channel.send(f'watch your fucking language, {username}')
-            return
-    elif user_message.lower() == 'where are you':
-            await message.channel.send(f'in yo mama')
-            return
-    elif user_message.lower() == 'fuck off':
-            await message.channel.send(f'little baby bitch cannot handle me lol')
-            return
-        
+  global cooldown
+  if message.content == 'hi' and cooldown.count(message.author.id) == 0:
+        cooldown.append(message.author.id)
+        await message.channel.send(f'Sup {username}')
+        time.sleep(5)
+        cooldown.remove(message.author.id)  
+
 #bot status cycle        
 @client.event
 async def status_cycle():
