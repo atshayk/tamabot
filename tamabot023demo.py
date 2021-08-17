@@ -120,6 +120,10 @@ async def embed(ctx):
 
   await ctx.send(embed=embed)
 
+@client.command()
+async def ping(ctx):
+  await ctx.send(f'Ping: {round (client.latency * 1000)} ms')
+
 #hosting
 keep_alive()
 my_secret = os.environ['TOKEN']
