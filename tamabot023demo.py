@@ -120,7 +120,6 @@ async def embed(ctx):
 
   await ctx.send(embed=embed)
 
-
 #hosting
 keep_alive()
 my_secret = os.environ['TOKEN']
