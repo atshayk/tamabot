@@ -25,13 +25,74 @@ async def on_message(message):
   user_message = str(message.content)
   channel = str(message.channel.name)
   print(f'{username}: {user_message} ({channel})')
-
+  
   global cooldown
   if message.content == 'hi' and cooldown.count(message.author.id) == 0:
-        cooldown.append(message.author.id)
-        await message.channel.send(f'Sup {username}')
-        time.sleep(5)
-        cooldown.remove(message.author.id)  
+    cooldown.append(message.author.id)
+    await message.channel.send(f'Sup {username}')
+    time.sleep(10)
+    cooldown.remove(message.author.id) 
+
+  elif message.content == 'hello' and cooldown.count(message.author.id) == 0:
+    cooldown.append(message.author.id)
+    await message.channel.send(f'Sup {username}')
+    time.sleep(10)
+    cooldown.remove(message.author.id)
+
+  elif message.content == 'sup' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'sup back at you, {username}')
+    time.sleep(10)
+    cooldown.remove(message.author.id)
+
+  elif message.content == 'bye' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'fuck off wanker!')
+    time.sleep(10)
+    cooldown.remove(message.author.id)
+
+  elif message.content == 'what are you' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'what do you think,bitch')
+    time.sleep(10)
+    cooldown.remove(message.author.id)
+
+  elif message.content == 'yo' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'yoyo mr mayo')
+    time.sleep(10)
+    cooldown.remove(message.author.id)
+
+  elif message.content == 'fuck you' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f"I don't care")
+    time.sleep(10)
+    cooldown.remove(message.author.id)  
+
+  elif message.content == 'what am i?' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'my little bitch')
+    time.sleep(10)
+    cooldown.remove(message.author.id)  
+
+  elif message.content == 'who are you' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'bot, tamabot.')
+    time.sleep(10)
+    cooldown.remove(message.author.id)  
+
+  elif message.content == 'heck' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'watch your fucking language, {username}')
+    time.sleep(10)
+    cooldown.remove(message.author.id)
+
+  elif message.content == 'where are you' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'in yo mama')
+    time.sleep(10)
+    cooldown.remove(message.author.id)
+
+  elif message.content == 'fuck off' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'little baby bitch cannot handle me lol')
+    time.sleep(10)
+    cooldown.remove(message.author.id)
+
+  elif message.content == 'naruto' and cooldown.count(message.author.id) == 0:
+    await message.channel.send(f'DATTEBAYO')
+    time.sleep(10)
+    cooldown.remove(message.author.id)
 
 #bot status cycle        
 @client.event
@@ -72,7 +133,7 @@ async def gun(ctx):
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def dm(ctx):
   await ctx.message.author.send("im not a girl sorry")
-
+#embed
 @client.command()
 async def embed(ctx):
   embed=discord.Embed(
@@ -87,6 +148,7 @@ async def embed(ctx):
 
   await ctx.send(embed=embed)
 
+#ping
 @client.command()
 async def ping(ctx):
   await ctx.send(f'Ping: {round (client.latency * 1000)} ms')
