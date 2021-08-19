@@ -1,5 +1,5 @@
 #tamabot
-#version v0.2.3 demo with MESSAGE COOLDOWNS
+#version v0.2.3 demo with MESSAGE COOLDOWNS 19/08/21
 
 import discord
 from discord.ext import commands
