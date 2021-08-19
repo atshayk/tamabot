@@ -29,13 +29,13 @@ async def on_message(message):
   global cooldown
   if message.content == 'hi' and cooldown.count(message.author.id) == 0:
     cooldown.append(message.author.id)
-    await message.channel.send(f'Sup {username}')
+    await message.channel.send(f'sup {username}')
     time.sleep(10)
     cooldown.remove(message.author.id) 
 
   elif message.content == 'hello' and cooldown.count(message.author.id) == 0:
     cooldown.append(message.author.id)
-    await message.channel.send(f'Sup {username}')
+    await message.channel.send(f'sup {username}')
     time.sleep(10)
     cooldown.remove(message.author.id)
 
@@ -133,6 +133,7 @@ async def gun(ctx):
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def dm(ctx):
   await ctx.message.author.send("im not a girl sorry")
+
 #embed
 @client.command()
 async def embed(ctx):
