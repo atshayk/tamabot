@@ -7,11 +7,9 @@ my goal is to give it as many features as possible such as currency system, musi
 (similar to dankmemer bot and other multipurpose bots)
 
 <h2> updates </h2>
-UPDATE 0.2.2 has been added to the bot!
+UPDATE 0.2.3 IS IN DEMO!
 
-The bot is now hosted online, so it will be up indefinitely. Hopefully. Lol.
-
-Downtime will happen as we are hosting it for FREE. Do not worry, it should get back up in a few minutes or so.
+This update is taking us some time idk why lol. We are facing some technical difficulties but I'll release the patch notes once it is done.
 
 <h2> next update? </h2>
 The next update will be 0.2.3 which will introduce embeds and more commands, to be out by this week.
