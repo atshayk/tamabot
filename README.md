@@ -8,6 +8,7 @@ my goal is to give it as many features as possible such as currency system, musi
 
 <h2> updates </h2>
 UPDATE 0.2.3 IS IN DEMO!
+Currently version 0.2.3b is in development
 
 This update is taking us some time idk why lol. We are facing some technical difficulties but I'll release the patch notes once it is done.
 
