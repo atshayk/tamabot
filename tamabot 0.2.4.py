@@ -181,8 +181,7 @@ async def support(ctx):
 async def changelog(ctx):
     embed = discord.Embed(title = "Changelog",
                           url = "https://github.com/icybe/tamabot"
-                          description =
-                          "Version 0.2.4 Patch Notes: \ 
+                          description = "Version 0.2.4 Patch Notes: \ 
                           - Replaced the default help command with '>help' that will display all the commands, in my style. \ 
                           - Commands are now arranged in categories: Fun, Sample, Technical. \ 
                           - Removed message cooldown system due to technical difficulties and unintended features. \ 
