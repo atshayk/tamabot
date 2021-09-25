@@ -98,10 +98,10 @@ client.loop.create_task(status_cycle())
 #the help command
 @client.group(invoke_without_command=True)
 async def help(ctx):
-    em = discord.Embed(title = "Help", description = "List of commands!")
-    em.add_field(name = "Fun", value = "greet, gun, joke") 
-    em.add_field(name = "Sample", value = "dm, embed")
-    em.add_field(name = "Technical", value = "ping, support, changelog")
+    embed = discord.Embed(title = "Help", description = "List of commands!")
+    embed.add_field(name = "Fun", value = "greet, gun, joke") 
+    embed.add_field(name = "Sample", value = "dm, embed")
+    embed.add_field(name = "Technical", value = "ping, support, changelog")
     await ctx.send(embed=embed)
 
 
