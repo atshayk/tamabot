@@ -180,7 +180,7 @@ async def support(ctx):
 @client.command()
 async def changelog(ctx):
     embed = discord.Embed(title = "Changelog",
-                          url = "https://github.com/icybe/tamabot"
+                          url = "https://github.com/icybe/tamabot",
                           description = "Version 0.2.4 Patch Notes: \n
                           - Replaced the default help command with '>help' that will display all the commands, in my style. \n
                           - Commands are now arranged in categories: Fun, Sample, Technical. \n
