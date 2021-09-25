@@ -7,7 +7,7 @@ my goal is to give it as many features as possible such as currency system, musi
 (similar to dankmemer bot and other multipurpose bots)
 
 <h2> changelog </h2>
-Patch Notes:
+Version 0.2.4 Patch Notes:
 
 - Replaced the default help command with ">help" that will display all the commands, in my style.
 
