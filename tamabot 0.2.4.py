@@ -6,7 +6,6 @@ import discord
 from discord.ext import commands
 from webserver import keep_alive
 import os
-import time
 import random
 import asyncio
 
@@ -34,7 +33,9 @@ async def on_message(message):
 
     if message.author == client.user:
         return
-
+        
+    a = 0
+    if a == 0:
         if user_message.lower() == 'hi':
             await message.channel.send(f'sup {username}')
             return
@@ -176,21 +177,20 @@ async def ping(ctx):
 async def support(ctx):
     await ctx.send(f'You can contact the dev: tama#4853')
     
-#changelog
+#changelog (currently this is not working as expected. the indentation is off.)
 @client.command()
 async def changelog(ctx):
     embed = discord.Embed(title = "Changelog",
                           url = "https://github.com/icybe/tamabot",
-                          description = "Version 0.2.4 Patch Notes: \n
-                          - Replaced the default help command with '>help' that will display all the commands, in my style. \n
-                          - Commands are now arranged in categories: Fun, Sample, Technical. \n
-                          - Removed message cooldown system due to technical difficulties and unintended features. \n
-                          - Added some new bot statuses! \n
-                          - Added new commands: support, changelog \n
-                          - Quality of life changes for bot messages. \n
-                          - Decreased cooldown for '>joke' command from 10s to 5s \n
-                          - Changed the cooldown warning message."
-                          color = discord.Color.blue())
+                          description = "Version 0.2.4 Patch Notes: \
+                          - Replaced the default help command with '>help' that will display all the commands, in my style. \
+                          - Commands are now arranged in categories: Fun, Sample, Technical. \
+                          - Removed message cooldown system due to technical difficulties and unintended features. \
+                          - Added some new bot statuses! \
+                          - Added new commands: support, changelog \
+                          - Quality of life changes for bot messages. \
+                          - Decreased cooldown for '>joke' command from 10s to 5s \
+                          - Changed the cooldown warning message.")
     await ctx.send(embed=embed)
 
 
