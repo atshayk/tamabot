@@ -181,14 +181,14 @@ async def support(ctx):
 async def changelog(ctx):
     embed = discord.Embed(title = "Changelog",
                           url = "https://github.com/icybe/tamabot"
-                          description = "Version 0.2.4 Patch Notes: \ 
-                          - Replaced the default help command with '>help' that will display all the commands, in my style. \ 
-                          - Commands are now arranged in categories: Fun, Sample, Technical. \ 
-                          - Removed message cooldown system due to technical difficulties and unintended features. \ 
-                          - Added some new bot statuses! \ 
-                          - Added new commands: support, changelog \ 
-                          - Quality of life changes for bot messages. \ 
-                          - Decreased cooldown for '>joke' command from 10s to 5s \ 
+                          description = "Version 0.2.4 Patch Notes: \n
+                          - Replaced the default help command with '>help' that will display all the commands, in my style. \n
+                          - Commands are now arranged in categories: Fun, Sample, Technical. \n
+                          - Removed message cooldown system due to technical difficulties and unintended features. \n
+                          - Added some new bot statuses! \n
+                          - Added new commands: support, changelog \n
+                          - Quality of life changes for bot messages. \n
+                          - Decreased cooldown for '>joke' command from 10s to 5s \n
                           - Changed the cooldown warning message."
                           color = discord.Color.blue())
     await ctx.send(embed=embed)
