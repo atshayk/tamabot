@@ -35,7 +35,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-     if user_message.lower() == 'hi':
+        if user_message.lower() == 'hi':
             await message.channel.send(f'sup {username}')
             return
         elif user_message.lower() == 'hello':
