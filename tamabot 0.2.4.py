@@ -177,7 +177,7 @@ async def ping(ctx):
 async def support(ctx):
     await ctx.send(f'You can contact the dev: tama#4853')
     
-#changelog (currently this is not working as expected. the indentation is off.)
+#changelog 
 @client.command()
 async def changelog(ctx):
     embed = discord.Embed(title = "Changelog",
