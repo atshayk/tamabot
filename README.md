@@ -8,14 +8,23 @@ my goal is to give it as many features as possible such as currency system, musi
 
 <h2> changelog </h2>
 Version 0.2.4 Patch Notes:
+
 -> Replaced the default help command with ">help" that will display all the commands, in my style.
+
 -> Commands are now arranged in categories: Fun, Sample, Technical.
+
 -> Removed message cooldown system due to technical difficulties and unintended features.
+
 -> Added some new bot statuses!
+
 -> Added new commands: support, changelog
+
 -> Quality of life changes for bot messages.
+
 -> Decreased cooldown for '>joke' command from 10s to 5s
+
 -> Changed the cooldown warning message.
+
 -> Currently the '>changelog' is not working as intended. This will be fixed soon.
 
 <h2> next update? </h2>
