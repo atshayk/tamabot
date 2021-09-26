@@ -25,8 +25,6 @@ Version 0.2.4 Patch Notes:
 
 - Changed the cooldown warning message.
 
-- Currently the '>changelog' is not working as intended. This will be fixed soon.
-
 <h2> next update? </h2>
 I'm planning on making 0.3v that will introduce coins and the economy.
 
