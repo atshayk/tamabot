@@ -86,7 +86,7 @@ async def on_message(message):
 async def status_cycle():
     await client.wait_until_ready()
     statuses = [
-        f"on {len(client.guilds)} servers | >help", "with your mom", ">help", "GTA 6", "Minecraft 2", "souls of the innocent", "Terraria: Otherworld", "Half Life 3"
+        f"on {len(client.guilds)} servers | >help", "your mom", ">help", "GTA 6", "Minecraft 2", "souls of the innocent", "Terraria: Otherworld", "Half Life 3"
     ]
     while not client.is_closed():
         status = random.choice(statuses)
