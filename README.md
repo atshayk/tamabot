@@ -10,6 +10,7 @@ my goal is to give it as many features as possible such as currency system, musi
 Version 0.2.4 Patch Notes:
 
 
+
 -> Replaced the default help command with ">help" that will display all the commands, in my style.
 
 -> Commands are now arranged in categories: Fun, Sample, Technical.
