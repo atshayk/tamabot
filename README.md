@@ -9,25 +9,23 @@ my goal is to give it as many features as possible such as currency system, musi
 <h2> changelog </h2>
 Version 0.2.4 Patch Notes:
 
+- Replaced the default help command with ">help" that will display all the commands, in my style.
 
+- Commands are now arranged in categories: Fun, Sample, Technical.
 
--> Replaced the default help command with ">help" that will display all the commands, in my style.
+- Removed message cooldown system due to technical difficulties and unintended features.
 
--> Commands are now arranged in categories: Fun, Sample, Technical.
+- Added some new bot statuses!
 
--> Removed message cooldown system due to technical difficulties and unintended features.
+- Added new commands: support, changelog
 
--> Added some new bot statuses!
+- Quality of life changes for bot messages.
 
--> Added new commands: support, changelog
+- Decreased cooldown for '>joke' command from 10s to 5s
 
--> Quality of life changes for bot messages.
+- Changed the cooldown warning message.
 
--> Decreased cooldown for '>joke' command from 10s to 5s
-
--> Changed the cooldown warning message.
-
--> Currently the '>changelog' is not working as intended. This will be fixed soon.
+- Currently the '>changelog' is not working as intended. This will be fixed soon.
 
 <h2> next update? </h2>
 I'm planning on making 0.3v that will introduce coins and the economy.
