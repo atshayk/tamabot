@@ -1,6 +1,6 @@
 #tamabot
 #version v0.3.0
-#date 26/09/2021
+#date 27/09/2021
 
 import discord
 from discord.ext import commands
