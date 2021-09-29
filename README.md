@@ -26,7 +26,7 @@ Version 0.2.4 Patch Notes:
 - Changed the cooldown warning message.
 
 <h2> next update? </h2>
-I'm planning on making 0.3v that will introduce coins and the economy.
+I'm working on v0.3 that will introduce economy!!! It's a bit confusing!!! :D
 
 <h2> roadmap </h2>
 follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
