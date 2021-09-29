@@ -33,3 +33,5 @@ follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
 
 <h2> devs </h2>
 developed by @icybe (tama) and @JoNanners (jo)
+
+tested by @Preyas552 (preyas)
