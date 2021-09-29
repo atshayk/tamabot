@@ -230,8 +230,9 @@ async def open_account(user):
     with open("mainbank.json","r") as f:
       json.dump(users, f)
     return True
-  
- async def get_bank_data():
+
+#get_bank_data  
+async def get_bank_data():
     with open("mainbank.json","r") as f:
       users = json.load(f)
     return users
