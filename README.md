@@ -17,7 +17,7 @@ Version 0.2.5 Patch Notes:
 I'm working on v0.3 that will introduce economy!!! It's a bit confusing!!! :D
 
 <h2> roadmap </h2>
-follow the roadmap on: https://trello.com/b/jZga0aeP/tamabot-dev
+the roadmap on trello is no longer maintained, i'll make a new roadmap here on github using project.
 
 <h2> devs </h2>
 developed by @icybe (tama) and @JoNanners (jo)
