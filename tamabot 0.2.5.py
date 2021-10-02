@@ -83,13 +83,13 @@ async def on_message(message):
             await message.channel.send(f'your mom')
             return
 
+        
 #bot status cycle
 @client.event
 async def status_cycle():
     await client.wait_until_ready()
     statuses = [
-        f"on {len(client.guilds)} servers | >help", "your mom", ">help", "GTA 6", "Minecraft 2", "souls of the innocent", "Terraria: Otherworld", "Half Life 3"
-    ]
+        f"on {len(client.guilds)} servers | >help","your mom",">help","GTA 6","Minecraft 2","souls of the innocent","Terraria: Otherworld","Half Life 3","on the PS5","your dad"]
     while not client.is_closed():
         status = random.choice(statuses)
         await client.change_presence(activity=discord.Game(name=status))
@@ -103,6 +103,7 @@ async def help(ctx):
     embed = discord.Embed(title = "Help", description = "List of commands!")
     embed.add_field(name = "Fun", value = "greet, gun, joke") 
     embed.add_field(name = "Sample", value = "dm, embed")
+    embed.add_field(name = "Moderation", value = "purge, kick, ban")
     embed.add_field(name = "Technical", value = "ping, support, changelog")
     await ctx.send(embed=embed)
 
