@@ -198,12 +198,10 @@ async def unban(ctx,*,member): #unban name#tagno
     member_name, member_disc = member.split('#')
     for banned_entry in banned_users:
         user = banned_entry.user
-        if(user.name, user.discriminator)==(member_name,member_disc):
+        if(user.name, user.discriminator)==(member_name, member_disc):
             await ctx.guild.unban(user)
             await ctx.send(member_name + " has been unbanned")
             return
-        else:
-        await ctx.send(member + " was not found in banlist. Maybe a typo.")
               
               
 #technical commands
