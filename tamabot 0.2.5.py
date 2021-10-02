@@ -1,6 +1,6 @@
 #tamabot
-#version v0.2.4
-#date 25/09/2021
+#version v0.2.5
+#date 02/10/2021
 
 import discord
 from discord.ext import commands
@@ -80,7 +80,8 @@ async def on_message(message):
             await message.channel.send(f'dattebayo!')
             return
         elif user_message.lower() == "what's for dinner":
-            await_message.channel.send(f'your mom')
+            await message.channel.send(f'your mom')
+            return
 
 #bot status cycle
 @client.event
