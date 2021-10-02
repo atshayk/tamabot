@@ -9,9 +9,9 @@ my goal is to give it as many features as possible such as currency system, musi
 <h2> changelog </h2>
 Version 0.2.5 Patch Notes:
 
--Added a new command category: Moderation.
+- Added a new command category: Moderation.
 
--Added new commands: purge, kick, ban.
+- Added new commands: purge, kick, ban, unban.
 
 <h2> next update? </h2>
 I'm working on v0.3 that will introduce economy!!! It's a bit confusing!!! :D
