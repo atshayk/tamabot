@@ -103,7 +103,7 @@ async def help(ctx):
     embed = discord.Embed(title = "Help", description = "List of commands!")
     embed.add_field(name = "Fun", value = "greet, gun, joke") 
     embed.add_field(name = "Sample", value = "dm, embed")
-    embed.add_field(name = "Moderation", value = "purge, kick, ban")
+    embed.add_field(name = "Moderation", value = "purge, kick, ban, unban")
     embed.add_field(name = "Technical", value = "ping, support, changelog")
     await ctx.send(embed=embed)
 
@@ -178,7 +178,7 @@ async def purge(ctx,amount=2):
 @client.command(aliases=['k'])
 @commands.has_permissions(kick_members = True)
 async def kick(ctx,member : discord.Member,*,reason="No reason provided."):
-  await member.send("You have been kicked from the server because: "+reason)
+  await member.send("You have been kicked from the server because: " + reason)
   await ctx.send(member.name + " has been kicked from the server because: " + reason)
   await member.kick(reason=reason)
 
@@ -186,9 +186,25 @@ async def kick(ctx,member : discord.Member,*,reason="No reason provided."):
 @client.command(aliases=['b'])
 @commands.has_permissions(ban_members = True)
 async def ban(ctx,member : discord.Member,*,reason="No reason provided."):
-  await member.send(" You have been banned from the server because: "+reason)
+  await member.send("You have been banned from the server because: " + reason)
   await ctx.send(member.name + " has been banned from the server because: " + reason)
   await member.ban(reason=reason)
+
+#unban
+@client.command(aliases=['ub'])
+@commands.has_permissions(ban_members = True)
+async def unban(ctx,*,member): #unban name#tagno
+    banned_users = await ctx.guild.bans()
+    member_name, member_disc = member.split('#')
+    
+    for banned_entry in banned_users:
+        user = banned_entry.user
+        
+        if(user.name, user.discriminator)==(member_name,member_disc):
+            await ctx.guild.unban(user)
+            await ctx.send(member_name + " has been unbanned")
+            return
+    await ctx.send(member + " was not found in banlist. Maybe a typo.")
               
               
 #technical commands
@@ -207,7 +223,7 @@ async def support(ctx):
 async def changelog(ctx):
     embed = discord.Embed(title = "Changelog",
                           url = "https://github.com/icybe/tamabot",
-                          description = "Version 0.2.5 Patch Notes: \n-Added a new command category: Moderation. \n-Added new commands: purge, kick, ban.")
+                          description = "Version 0.2.5 Patch Notes: \n-Added a new command category: Moderation. \n-Added new commands: purge, kick, ban, unban.")
     await ctx.send(embed=embed)
 
 
