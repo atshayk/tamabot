@@ -140,8 +140,6 @@ async def gun(ctx):
     username_cmd = str(ctx.author).split("#")[0]
     await ctx.send(f"{username_cmd}, put down the gun! let's talk this out. oh wait, i can't sustain a conversation.")
 
-
-
     
 #sample commands
 #dm
