@@ -80,7 +80,8 @@ async def on_message(message):
             await message.channel.send(f'dattebayo!')
             return
         elif user_message.lower() == "what's for dinner":
-            await_message.channel.send(f'your mom')
+            await message.channel.send(f'your mom')
+            return
 
 #bot status cycle
 @client.event
