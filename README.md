@@ -14,7 +14,7 @@ Version 0.2.5 Patch Notes:
 - Added new commands: purge, kick, ban, unban.
 
 <h2> next update? </h2>
-I'm working on v0.3 that will introduce economy!!! It's a bit confusing!!! :D
+The v0.3 will take some time. We are searching for a suitable database to store user's economy info. Stay tuned! :D
 
 <h2> roadmap </h2>
 the roadmap on trello is no longer maintained, i'll make a new roadmap here on github using project.
