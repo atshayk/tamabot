@@ -177,16 +177,16 @@ async def purge(ctx,amount=2):
 @client.command(aliases=['k'])
 @commands.has_permissions(kick_members = True)
 async def kick(ctx,member : discord.Member,*,reason="No reason provided."):
-  await member.send("You have been kicked from the server because:"+reason)
-  await ctx.send(member.name + "has been kicked from the server because:" + reason)
+  await member.send("You have been kicked from the server because: "+reason)
+  await ctx.send(member.name + " has been kicked from the server because: " + reason)
   await member.kick(reason=reason)
 
 #ban
 @client.command(aliases=['b'])
 @commands.has_permissions(ban_members = True)
 async def ban(ctx,member : discord.Member,*,reason="No reason provided."):
-  await member.send("You have been banned from the server because:"+reason)
-  await ctx.send(member.name + "has been banned from the server because:" + reason)
+  await member.send(" You have been banned from the server because: "+reason)
+  await ctx.send(member.name + " has been banned from the server because: " + reason)
   await member.ban(reason=reason)
               
               
