@@ -79,7 +79,7 @@ async def on_message(message):
         elif user_message.lower() == 'naruto':
             await message.channel.send(f'dattebayo!')
             return
-        elif user_message.lower() == 'what's for dinner':
+        elif user_message.lower() == "what's for dinner":
             await_message.channel.send(f'your mom')
 
 #bot status cycle
