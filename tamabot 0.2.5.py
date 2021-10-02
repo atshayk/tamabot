@@ -202,6 +202,8 @@ async def unban(ctx,*,member): #unban name#tagno
             await ctx.guild.unban(user)
             await ctx.send(member_name + " has been unbanned")
             return
+        else:
+            await ctx.send(member_name + " was not found.")
               
               
 #technical commands
