@@ -253,11 +253,15 @@ async def unban(ctx,*,member): #unban name#tagno
 
 #mute (only used on tamabot dev server)
 @client.command(aliases=['m'])
-@commands.has_permissions(kick_members = True)
+@commands.has_permissions(kick_members = True, manage_messages = True)
 async def mute(ctx, member : discord.Member):
   muted_role = ctx.guild.get_role(894218462623326288)
+  for channel in ctx.guild.channels:  
+    await channel.set_permissions(muted_role,send_messages = False, add_reactions = False)
   await member.add_roles(muted_role)
   await ctx.send(member.mention + " has been muted. lol!")
+  return
+
 
 #unmute (only used on tamabot server)
 @client.command(aliases=['um'])
