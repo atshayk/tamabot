@@ -122,16 +122,12 @@ async def on_command(ctx,error):
   else:
     raise error
 
+    
 #command cooldown
 @client.event
-async def on_command_error(
-    ctx,
-    error,
-):
-    if isinstance(error, commands.CommandOnCooldown):
-        error = (
-            'Wait right there, buster! ({:.1f}s remaining)'
-        ).format(error.retry_after)
+async def cooldown_command(ctx,error):
+    if isinstance(error,commands.CommandOnCooldown):
+        error = ('Wait right there, buster! ({:.1f}s remaining)').format(error.retry_after)
         await ctx.send(error)
 
 
