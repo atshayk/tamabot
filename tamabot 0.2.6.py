@@ -82,7 +82,7 @@ async def on_message(message):
         elif user_message.lower() == "what's for dinner":
             await message.channel.send(f'your mom')
             return
-         elif user_message.lower() == 'f':
+        elif user_message.lower() == 'f':
             await message.channel.send(f'f')
             return
         elif user_message.lower() == "fire":
@@ -177,7 +177,7 @@ async def poll(ctx,*,msg):
   try:
     op1,op2 = msg.split("or")
     txt = f"React with ✔️ for {op1} or ❌ for {op2}"
-   except:
+  except:
     await channel.send("correct syntax : [choice 1] or [choice 2]")
     return
   
