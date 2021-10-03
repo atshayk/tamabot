@@ -90,7 +90,7 @@ async def on_message(message):
             return
         #bot reactions
         elif "check" in message.content:
-            await msg.add_reaction("✔️")
+            await message.add_reaction("✔️")
         #automod
         filtered_words = ["carl wheezer"]
         for word in filtered_words:
