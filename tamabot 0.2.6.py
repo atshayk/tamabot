@@ -88,16 +88,15 @@ async def on_message(message):
         elif user_message.lower() == "fire":
             await message.channel.send(f'🔥')
             return
-        elif user_message.lower() == "✔️":
-            await message.channel.send(f"what's up checkmark")
-            return
-
-
-#bot reactions
-@client.event
-async def on_message(msg):
-  if "check" in msg.content:
-    await msg.add_reaction("✔️")
+        #bot reactions
+        elif "check" in message.content:
+            await msg.add_reaction("✔️")
+        #automod
+        filtered_words = ["carl wheezer"]
+        for word in filtered_words:
+            if word in message.content:
+                await message.delete()
+            await client.process_commands(msg)
 
         
 #bot status cycle
@@ -268,15 +267,6 @@ async def unmute(ctx, member : discord.Member):
   muted_role = ctx.guild.get_role(894218462623326288)
   await member.remove_roles(muted_role)
   await ctx.send(member.mention + " has been unmuted.")
-
-#automod
-filtered_words = ["carl wheezer"]
-@client.event
-async def on_message(msg):
-  for word in filtered_words:
-    if word in msg.content:
-      await msg.delete()
-  await client.process_commands(msg)
               
               
 #technical commands
