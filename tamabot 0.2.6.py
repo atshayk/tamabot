@@ -114,11 +114,17 @@ client.loop.create_task(status_cycle())
 
 #error handling
 @client.event
-async def on_command_error(ctx,error):
+async def on_command(ctx,error):
   if isinstance(error,commands.MissingPermissions):
     await ctx.send("You are missing some perms bro xD")
   elif isinstance(error,commands.MissingRequiredArgument):
     await ctx.send("You are missing some required arguments dude lmao")
+  #command cooldown
+  elif isinstance(error, commands.CommandOnCooldown):
+        error = (
+            'Wait right there, buster! ({:.1f}s remaining)'
+        ).format(error.retry_after)
+        await ctx.send(error)
   else:
     raise error
 
@@ -132,19 +138,6 @@ async def help(ctx):
     embed.add_field(name = "Moderation", value = "purge, kick, ban, unban")
     embed.add_field(name = "Technical", value = "ping, support, changelog")
     await ctx.send(embed=embed)
-
-
-#command cooldown
-@client.event
-async def on_command_error(
-    ctx,
-    error,
-):
-    if isinstance(error, commands.CommandOnCooldown):
-        error = (
-            'Wait right there, buster! ({:.1f}s remaining)'
-        ).format(error.retry_after)
-        await ctx.send(error)
 
         
 #commands
