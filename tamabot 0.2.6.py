@@ -96,7 +96,7 @@ async def on_message(message):
         for word in filtered_words:
             if word in message.content:
                 await message.delete()
-            await client.process_commands(msg)
+            await client.process_commands(message)
 
         
 #bot status cycle
