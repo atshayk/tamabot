@@ -28,7 +28,7 @@ The v0.3 will take some time. We are searching for a suitable database to store 
 <h2> roadmap </h2>
 the roadmap on trello is no longer maintained, i'll make a new roadmap here on github using project.
 
-<h2> devs </h2>
+<h2> team </h2>
 developed by @icybe (tama) and @JoNanners (jo)
 
 tested by @Preyas552 (preyas)
