@@ -23,7 +23,7 @@ Version 0.2.6 Patch Notes:
 
 
 <h2> next update? </h2>
-The v0.3 will take some time. We are searching for a suitable database to store user's economy info. Stay tuned! :D
+We are currently working on v0.3.0 and v0.3.1 where we are dealing with technical futureproofing and database implementation. After that, hopefully, we can start making snapshots for the economy features.
 
 <h2> roadmap </h2>
 the roadmap on trello is no longer maintained, i'll make a new roadmap here on github using project.
