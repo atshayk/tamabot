@@ -26,10 +26,15 @@ Version 0.2.6 Patch Notes:
 Hi! Sorry for no show.
 
 Bot development has been in hiatus due to college coursework.
+
 The next update will be 0.3.0. It will be focusing on database implementation and cleaning up the code to make development easier for us.
+
 Currently in 0.2.6, it's very messy despite the limited functionality of the bot.
+
 We'll also optimise and improve on existing features like moderation commands.
+
 In 0.4, we will make economy snapshots and introduce manyyy new features.
+
 And in 0.5, hopefully we can introduce image/gif generation.
 
 
