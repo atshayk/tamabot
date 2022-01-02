@@ -23,7 +23,19 @@ Version 0.2.6 Patch Notes:
 
 
 <h2> next update? </h2>
-We are currently working on v0.3.0 and v0.3.1 where we are dealing with technical futureproofing and database implementation. After that, hopefully, we can start making snapshots for the economy features.
+Hi! Sorry for no show.
+
+Bot development has been in hiatus due to college coursework.
+
+The next update will be 0.3.0. It will be focusing on database implementation and cleaning up the code to make development easier for us.
+
+Currently in 0.2.6, it's very messy despite the limited functionality of the bot.
+
+We'll also optimise and improve on existing features like moderation commands.
+
+In 0.4, we will make economy snapshots and introduce manyyy new features.
+
+And in 0.5, hopefully we can introduce image/gif generation.
 
 
 <h2> team </h2>
