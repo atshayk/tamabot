@@ -38,4 +38,5 @@ And in 0.5, hopefully we can introduce image/gif generation.
 
 <h2> team </h2>
 developed by @icybe @JoNanners @SilverTongue1729 @Foxtrot2409
+
 tested by @Preyas552
