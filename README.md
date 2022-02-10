@@ -37,8 +37,8 @@ And in 0.5, hopefully we can introduce image/gif generation.
 
 
 <h2> team </h2>
-lead developer & art @icybe (tama) 
-developer @JoNanners (jo)
-developer @SilverTongue1729
-developer @Foxtrot2409
-tester @Preyas552 (preyas)
+lead developer & art @icybe (tama)  
+developer @JoNanners (jo)  
+developer @SilverTongue1729  
+developer @Foxtrot2409  
+tester @Preyas552 (preyas)  
