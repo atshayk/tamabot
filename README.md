@@ -7,20 +7,7 @@ my goal is to give it as many features as possible such as currency system, musi
 (similar to dankmemer bot and other multipurpose bots)
 
 <h2> changelog </h2>
-Version 0.2.6 Patch Notes:
-
-- Added new commands: mute, unmute, poll
-
-- Added automod, it removes any message with 'carl wheezer'
-
-- Added error handling.
-
-- Added bot reactions! The bot now reacts to certain messages.
-
-- Added new bot messages.
-
-- The commands 'kick' and 'ban' will work now if the user's DMs are closed. #futureproof
-
+0.3.0 in development.
 
 <h2> next update? </h2>
 Hi! Sorry for no show.
