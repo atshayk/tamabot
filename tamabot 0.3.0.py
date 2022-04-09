@@ -45,7 +45,7 @@ async def on_command_error(ctx,error):
 @bot.event
 async def on_command_cooldown(ctx,cooldown_message):
     if isinstance(cooldown_message, commands.CommandOnCooldown):
-        cooldown_message = ('Wait right there, buster! ({:.1f}s remaining)').format(error.retry_after)
+        cooldown_message = ('Wait right there, buster! ({:.1f}s remaining)').format(cooldown_message.retry_after)
         await ctx.send(cooldown_message)
         
 #commands
