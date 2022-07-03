@@ -1,6 +1,5 @@
 #tamabot
-#version PROJECT_DEMO v1
-#dated 02/07/2022
+#version v0.2.5
 
 import discord
 from discord.ext import commands
@@ -34,7 +33,7 @@ async def on_message(message):
     if message.author == client.user:
         return
         
-    a = 0 #a is message loop.
+    a = 0
     if a == 0:
         if user_message.lower() == 'hi':
             await message.channel.send(f'sup {username}')
@@ -45,6 +44,9 @@ async def on_message(message):
         elif user_message.lower() == 'sup':
             await message.channel.send(f'sup back at u, {username}')
             return
+        elif user_message.lower() == 'how are you':
+            await message.channel.send(f'i am good')
+            return
         elif user_message.lower() == 'bye':
             await message.channel.send(f'bye then!')
             return
@@ -52,18 +54,9 @@ async def on_message(message):
             await message.channel.send(f'bot, tamabot.')
             return
             return
-        elif user_message.lower() == "fire":
-            await message.channel.send(f'🔥')
+        elif user_message.lower() == 'naruto':
+            await message.channel.send(f'dattebayo!')
             return
-        #bot reactions
-        elif "check" in message.content:
-            await message.add_reaction("✔️")
-        #automod
-        filtered_words = ["automod"]
-        for word in filtered_words:
-            if word in message.content:
-                await message.delete()
-            await client.process_commands(message)
 
         
 #bot status cycle
@@ -71,35 +64,12 @@ async def on_message(message):
 async def status_cycle():
     await client.wait_until_ready()
     statuses = [
-        f"on {len(client.guilds)} servers | >help","not sure what to do? type >help to get started!"]
+        f"on {len(client.guilds)} servers | >help"]
     while not client.is_closed():
         status = random.choice(statuses)
         await client.change_presence(activity=discord.Game(name=status))
         await asyncio.sleep(30)
 client.loop.create_task(status_cycle())
-
-
-#error handling
-@client.event
-async def on_command(ctx,error):
-  if isinstance(error,commands.MissingPermissions):
-    await ctx.send("You are missing some permissions.")
-  elif isinstance(error,commands.MissingRequiredArgument):
-    await ctx.send("You are missing some required arguments.")
-  else:
-    raise error
-
-#command cooldown
-@client.event
-async def on_command_error(
-    ctx,
-    error,
-):
-    if isinstance(error, commands.CommandOnCooldown):
-        error = (
-            'Please wait! ({:.1f}s remaining)'
-        ).format(error.retry_after)
-        await ctx.send(error)
 
 
 #the help command
@@ -112,7 +82,20 @@ async def help(ctx):
     embed.add_field(name = "Technical", value = "ping, support, changelog")
     await ctx.send(embed=embed)
 
-        
+
+#command cooldown
+@client.event
+async def on_command_error(
+    ctx,
+    error,
+):
+    if isinstance(error, commands.CommandOnCooldown):
+        error = (
+            'Wait right there, buster! ({:.1f}s remaining)'
+        ).format(error.retry_after)
+        await ctx.send(error)
+
+      
 #commands
 #fun commands
 #greet
@@ -134,23 +117,6 @@ async def joke(ctx):
 async def gun(ctx):
     username_cmd = str(ctx.author).split("#")[0]
     await ctx.send(f"{username_cmd}, put down the gun! let's talk this out. oh wait, i can't sustain a conversation.")
-
-#poll
-@client.command()
-async def poll(ctx,*,msg):
-  channel = ctx.channel
-  try:
-    op1,op2 = msg.split("or")
-    txt = f"React with ✔️ for {op1} or ❌ for {op2}"
-  except:
-    await channel.send("correct syntax : [choice 1] or [choice 2]")
-    return
-  
-  embed = discord.Embed(title = 'Poll', description = txt)
-  message_ = await channel.send(embed = embed)
-  await message_.add_reaction("✔️")
-  await message_.add_reaction("❌")
-  await ctx.message.delete()
 
     
 #sample commands
@@ -187,21 +153,17 @@ async def purge(ctx,amount=2):
 @client.command(aliases=['k'])
 @commands.has_permissions(kick_members = True)
 async def kick(ctx,member : discord.Member,*,reason="No reason provided."):
-  try:
-    await member.send("You have been kicked from the server because: " + reason)
-  except:
-    await ctx.send(member.name + " has been kicked from the server because: " + reason)
-    await member.kick(reason=reason)
+  await member.send("You have been kicked from the server because: " + reason)
+  await ctx.send(member.name + " has been kicked from the server because: " + reason)
+  await member.kick(reason=reason)
 
-#ban (note: this command deletes all messages from previous 24hours)
+#ban
 @client.command(aliases=['b'])
 @commands.has_permissions(ban_members = True)
 async def ban(ctx,member : discord.Member,*,reason="No reason provided."):
-  try:
-    await member.send("You have been banned from the server because: " + reason)
-  except:
-    await ctx.send(member.name + " has been banned from the server because: " + reason)
-    await member.ban(reason=reason)
+  await member.send("You have been banned from the server because: " + reason)
+  await ctx.send(member.name + " has been banned from the server because: " + reason)
+  await member.ban(reason=reason)
 
 #unban
 @client.command(aliases=['ub'])
@@ -213,26 +175,10 @@ async def unban(ctx,*,member): #unban name#tagno
         user = banned_entry.user
         if(user.name, user.discriminator)==(member_name, member_disc):
             await ctx.guild.unban(user)
-            await ctx.send(member_name + " has been unbanned.")
+            await ctx.send(member_name + " has been unbanned")
             return
         else:
             await ctx.send(member_name + " was not found.")
-
-#mute (only used on tamabot dev server)
-@client.command(aliases=['m'])
-@commands.has_permissions(kick_members = True)
-async def mute(ctx, member : discord.Member):
-  muted_role = ctx.guild.get_role(894218462623326288)
-  await member.add_roles(muted_role)
-  await ctx.send(member.mention + " has been muted. lol!")
-
-#unmute (only used on project server)
-@client.command(aliases=['um'])
-@commands.has_permissions(kick_members = True)
-async def unmute(ctx, member : discord.Member):
-  muted_role = ctx.guild.get_role(894218462623326288)
-  await member.remove_roles(muted_role)
-  await ctx.send(member.mention + " has been unmuted.")
               
               
 #technical commands
@@ -250,8 +196,8 @@ async def support(ctx):
 @client.command()
 async def changelog(ctx):
     embed = discord.Embed(title = "Changelog",
-                          url = "https://github.com/icybe/project_demo",
-                          description = "Project Demo Patch Notes: \n-Added error handling. \n-Bans will now work even if the user's direct messaging is closed.")
+                          url = "https://github.com/icybe/tamabot",
+                          description = "Version 0.2.5 Patch Notes: \n-Added a new command category: Moderation. \n-Added new commands: purge, kick, ban, unban.")
     await ctx.send(embed=embed)
 
 
