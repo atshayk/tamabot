@@ -10,8 +10,10 @@ my goal is to give it as many features as possible such as currency system, musi
 This update I'm introducing snapshots for very small changes in the bot.
 They will be indicated with # after the version number.
 (For example, 0.2.5#1. This is read as "zero point two point five snapshot one")
+
 The bot has been rolled back to v0.2.5 due to multiple issues with v0.2.6.
 NOTE: v0.2.6 features WILL be reintroduced provided that they don't cause issues.
+
 
 Version v0.2.5#1 Patch Notes:
 - Added a new FUN command: caught
