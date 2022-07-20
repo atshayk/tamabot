@@ -60,3 +60,8 @@ async def help(ctx):
     embed.add_field(name = "Moderation", value = "purge, kick, ban(note: this command deletes all messages from previous 24hours), unban")
     embed.add_field(name = "Technical", value = "ping, support, changelog")
     await ctx.send(embed=embed)
+    
+#hosting
+keep_alive()
+my_secret = os.environ['TOKEN']
+bot.run(my_secret)
