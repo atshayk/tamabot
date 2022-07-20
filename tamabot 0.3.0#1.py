@@ -1,6 +1,6 @@
-#tamabot
-#version 0.3.0
-#date 30/03/2022
+#tamabot ALPHA 3
+#version 0.3.0 snapshot #1
+#date 20/07/2022
 
 #imports
 import discord
@@ -14,6 +14,8 @@ import asyncio
 bot = commands.Bot(command_prefix=">")
 #cooldown list
 cooldown = []
+#removing default help command
+client.remove_command("help")
 
 #bot login
 @bot.event
