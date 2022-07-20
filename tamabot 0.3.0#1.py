@@ -5,7 +5,7 @@
 #imports
 import discord
 from discord.ext import commands
-from webserver import keep_alive
+from webserver import keep_alive()
 import os
 import random
 import asyncio
