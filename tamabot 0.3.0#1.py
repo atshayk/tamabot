@@ -40,15 +40,18 @@ async def on_command_error(ctx,error):
         await ctx.send("You are missing some perms bro xD")
     elif isinstance(error,commands.MissingRequiredArgument):
         await ctx.send("You are missing some required arguments dude lmao")
+    elif isinstance(error, commands.CommandOnCooldown):
+        cooldown_message = ('Wait right there, buster! ({:.1f}s remaining)').format(cooldown_message.retry_after)
+        await ctx.send(cooldown_message)
     else:
         raise error
     
 #bot command cooldown
-@bot.event
-async def on_command_cooldown(ctx,cooldown_message):
-    if isinstance(cooldown_message, commands.CommandOnCooldown):
-        cooldown_message = ('Wait right there, buster! ({:.1f}s remaining)').format(cooldown_message.retry_after)
-        await ctx.send(cooldown_message)
+# @bot.event
+# async def on_command_cooldown(ctx,cooldown_message):
+#     if isinstance(cooldown_message, commands.CommandOnCooldown):
+#         cooldown_message = ('Wait right there, buster! ({:.1f}s remaining)').format(cooldown_message.retry_after)
+#         await ctx.send(cooldown_message)
         
 #commands
 #the help command
