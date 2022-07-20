@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix=">")
 #cooldown list
 cooldown = []
 #removing default help command
-client.remove_command("help")
+bot.remove_command("help")
 
 #bot login
 @bot.event
