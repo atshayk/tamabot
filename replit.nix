@@ -1,6 +1,7 @@
 { pkgs }: {
   deps = [
-    pkgs.pip install discord
+    pkgs.;
+pkgs.pip install discord
 pkgs.python38Full
   ];
   env = {
