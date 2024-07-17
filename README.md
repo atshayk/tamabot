@@ -1,8 +1,9 @@
 # tamabot
 
 <h2> about </h2>
-tamabot is a discord bot, which chats and executes in-built commands.
-it is intended for good fun with friends in Discord servers and operated with close to zero downtime.
+"tamabot" is a discord bot, which chats and executes in-built commands.
+
+It is intended for good fun with friends in Discord servers and operated with close to zero downtime.
 
 <h2> goal </h2>
 To give it as many features as possible such as currency system, music player, image generation, etc. for fun.
