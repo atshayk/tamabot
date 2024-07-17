@@ -1,5 +1,20 @@
 # tamabot
 
+<h1> !!! security notice </h1>
+Highly advised to not execute any code on your machine.
+
+As of July 2024, Github's Dependabot has identified 19 different vulnerabilities associated with the code with high severity.
+
+This is due to old and outdated code from 2021.
+
+I will fix these issues when I resume development of the bot.
+
+Please keep this in mind if you wish to execute the program.
+
+I'm not liable for any damages or harm done to any machine, as the intention of the bot is not to infect or enable attackers, but rather plain simple fun.
+
+Thank you for reading, and stay safe.
+
 <h2> about </h2>
 "tamabot" is a discord bot, which chats and executes in-built commands.
 
