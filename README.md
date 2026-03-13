@@ -22,7 +22,7 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - Browse discounted games and deals
 - View top selling games on Steam
 - Search for specific games on Steam
-- Look up Steam user profiles (with API key)
+- Look up Steam user profiles
 
 ### More features in active development!
 - Admin actions
