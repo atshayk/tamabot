@@ -113,8 +113,8 @@ class LLM(commands.Cog):
             if response and response.choices and response.choices[0].message.content:
                 answer = response.choices[0].message.content
                 # Limit response length for Discord
-                if len(answer) > 1900:
-                    answer = answer[:1900] + "... (response truncated)"
+                if len(answer) > 500:
+                    answer = answer[:500] + "... (response truncated)"
 
                 await ctx.send(answer)
 

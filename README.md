@@ -82,7 +82,7 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 ### Hosting
 - **Render** (Hobby tier)
 - **UptimeRobot** for keep-alive monitoring
-- Currently locally hosted.
+- Locally hosted currently.
 
 ## Setup Instructions
 
