@@ -1,5 +1,6 @@
 # Tamabot - Discord Bot
 
+![Alpha](https://img.shields.io/badge/status-alpha-red.svg)
 ![VERSION](https://img.shields.io/badge/version-0.4.2-green.svg)
 ![Python](https://img.shields.io/badge/python-3.13-blue.svg)
 ![Mistral](https://img.shields.io/badge/mistral-ai-violet.svg)
