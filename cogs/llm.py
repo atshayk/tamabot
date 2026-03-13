@@ -30,6 +30,41 @@ class LLM(commands.Cog):
     @commands.command()
     async def ask(self, ctx, *, question):
         """Ask the bot a question using Mistral AI API"""
+        await self._process_question(ctx, question)
+
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        """Respond to mentions with AI functionality"""
+        # Ignore messages from the bot itself
+        if message.author == self.bot.user:
+            return
+
+        # Check if bot is mentioned
+        if self.bot.user.mentioned_in(message):
+            # Extract the question content (remove bot mention)
+            question = message.content
+            for mention in message.mentions:
+                question = question.replace(f'<@{mention.id}>', '').replace(f'<@!{mention.id}>', '')
+            question = question.strip()
+
+            # If there's actual content after removing mentions
+            if question:
+                # Create a context-like object for consistency
+                class MockContext:
+                    def __init__(self, messageInner):
+                        self.message = messageInner
+                        self.author = messageInner.author
+                        self.channel = messageInner.channel
+                        self.guild = messageInner.guild
+
+                    async def send(self, content, **kwargs):
+                        return await self.message.channel.send(content, **kwargs)
+
+                ctx = MockContext(message)
+                await self._process_question(ctx, question)
+
+    async def _process_question(self, ctx, question):
+        """Process a question using Mistral AI (shared between ask command and mentions)"""
         if not self.api_key:
             await ctx.send("MISTRAL_API_KEY not found in environment variables!")
             return
