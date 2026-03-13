@@ -11,7 +11,7 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 
 ## Features
 
-### 🤖 LLM Chat
+### 🤖 AI Chat
 - Interactive conversations with Mistral models
 - Context-aware responses with conversation memory
 - Multiple AI models to choose from
@@ -36,11 +36,13 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - Search news by keywords
 - News categorized by source
 
-### More features in active development!
+### ✍️ More features in active development!
+- Fun and creative commands
 - Admin actions
-- Agentic capability
+- Agentic tooling
 - Economy features and minigames
 - External database connection
+- Even more additions to existing features!
 
 ## Commands
 
@@ -55,13 +57,14 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - `>ask <question>` - Ask the AI anything
 - `>clear_memory` - Reset your conversation history
 - `>list_models` - See available AI models
-- `>set_model <model>` - Switch AI models
+- `>set_model [model]` - Switch AI models
 - `>diagnose_model` - Check AI service status
+- `>talktoforge` - Talks to [TaskForge](https://github.com/Mohit-Mano06/TaskForge-Bot), a rival bot developed by my friend Momo.
 
 ### Music Commands
 - `>join` - Join your voice channel
 - `>leave` - Leave the voice channel
-- `>play <query>` - Play a song from YouTube
+- `>play [query]` - Play a song from YouTube
 - `>skip` - Skip the current song
 - `>pause` - Pause playback
 - `>resume` - Resume playback
@@ -73,7 +76,7 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - `>deals [limit]` - Show discounted games
 - `>topgames [limit]` - Show top selling games
 - `>steamstatus` - Check Steam service status
-- `>steamsearch <query>` - Search for games
+- `>steamsearch [query]` - Search for games
 - `>steamuser <steam_id>` - Get user info
 
 ### News Commands
@@ -82,6 +85,22 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - `>technews` - Get latest technology news
 - `>businessnews` - Get latest business news
 - `>newsources` - List available news sources
+
+## Installation
+
+1. Clone the repository
+2. Install required dependencies
+3. Set up your environment variables in a `.env` file
+4. Run the bot: `python main.py`
+
+### Requirements
+- Python 3.13
+- FFmpeg installed on system
+- Discord bot token
+- Mistral AI API key
+- Steam API key
+- NewsAPI key
+- See more below VVV
 
 ## Technical Specifications
 
@@ -101,24 +120,9 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - `newsapi-python` - NewsAPI client
 
 ### Hosting
-- **Render** (Hobby tier)
+- **Render**
 - **UptimeRobot** for keep-alive monitoring
 - Locally hosted currently.
-
-## Setup Instructions
-
-1. Clone the repository
-2. Install required dependencies
-3. Set up your environment variables in a `.env` file
-4. Run the bot: `python main.py`
-
-## Requirements
-- Python 3.13
-- FFmpeg installed on system
-- Discord bot token
-- Mistral AI API key
-- Steam API key
-- NewsAPI key
 
 ---
 
