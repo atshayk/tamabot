@@ -15,6 +15,7 @@ class LLM(commands.Cog):
         self.client = None
         self.model_name = 'open-mistral-7b'  # Default Mistral model
         self.conversations = {}  # Store conversation history per user
+        self.taskforge_id = 1469604877503299709  # TaskForge's app ID
 
         if self.api_key:
             try:
@@ -31,6 +32,13 @@ class LLM(commands.Cog):
     async def ask(self, ctx, *, question):
         """Ask the bot a question using Mistral AI API"""
         await self._process_question(ctx, question)
+
+    @commands.command()
+    async def talktoforge(self, ctx, *, message: str):
+        """Talk to TaskForge bot directly"""
+        # Mention TaskForge in the channel
+        taskforge_mention = f"<@{self.taskforge_id}>"
+        await ctx.send(f"{taskforge_mention} {message}")
 
     @commands.Cog.listener()
     async def on_message(self, message):
@@ -114,7 +122,7 @@ class LLM(commands.Cog):
                 answer = response.choices[0].message.content
                 # Limit response length for Discord
                 if len(answer) > 500:
-                    answer = answer[:500] + "... (response truncated)"
+                    answer = answer[:500] + "...nevermind."
 
                 await ctx.send(answer)
 

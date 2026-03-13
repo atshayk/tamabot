@@ -4,11 +4,10 @@ from discord.ext import commands
 import os
 from dotenv import load_dotenv
 import logging
-import webserver  # Import web server for Render hosting
+#import webserver  # Import web server for Render hosting / Will be implemented later...
 import asyncio
 import aiohttp
 import sys
-# testing git
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -126,8 +125,9 @@ async def main():
         'cogs.general',
         'cogs.llm',
         'cogs.music',
-        'cogs.steam'  # Added Steam cog
-        # 'cogs.admin'  # Uncomment when you create admin.py
+        'cogs.steam',
+        'cogs.news'
+        # 'cogs.admin' # WIP
     ]
 
     for extension in initial_extensions:

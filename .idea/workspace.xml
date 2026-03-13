@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41fbe785-78a2-4f3b-9f4a-450228ab9e05" name="Changes" comment="Added @mentions">
+    <list default="true" id="41fbe785-78a2-4f3b-9f4a-450228ab9e05" name="Changes" comment="Edited a few things">
+      <change afterPath="$PROJECT_DIR$/cogs/news.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cogs/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/general.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cogs/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/llm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773330632840</updated>
       <workItem from="1773330633852" duration="17757000" />
-      <workItem from="1773391571733" duration="21638000" />
+      <workItem from="1773391571733" duration="25935000" />
     </task>
     <task id="LOCAL-00001" summary="done">
       <option name="closed" value="true" />
@@ -131,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773415502860</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Edited a few things">
+      <option name="closed" value="true" />
+      <created>1773428999720</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773428999720</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,12 +151,13 @@
     <MESSAGE value="done" />
     <MESSAGE value="Added steam module." />
     <MESSAGE value="Added @mentions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added @mentions" />
+    <MESSAGE value="Edited a few things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited a few things" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tamabot$general.coverage" NAME="general Coverage Results" MODIFIED="1773341830127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cogs" />
     <SUITE FILE_PATH="coverage/tamabot$music.coverage" NAME="music Coverage Results" MODIFIED="1773343648614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cogs" />
     <SUITE FILE_PATH="coverage/tamabot$llm.coverage" NAME="llm Coverage Results" MODIFIED="1773347233418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cogs" />
-    <SUITE FILE_PATH="coverage/tamabot$main.coverage" NAME="main Coverage Results" MODIFIED="1773417087453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tamabot$main.coverage" NAME="main Coverage Results" MODIFIED="1773432428317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
