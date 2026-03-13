@@ -1,8 +1,8 @@
 # Tamabot - Discord Bot
 
+![VERSION](https://img.shields.io/badge/version-0.4.2-green.svg)
 ![Python](https://img.shields.io/badge/python-3.13-blue.svg)
 ![Mistral](https://img.shields.io/badge/mistral-ai-violet.svg)
-![VERSION](https://img.shields.io/badge/version-0.4.2-green.svg)
 ![DISCORD](https://img.shields.io/badge/discord-1f2933?logo=discord&logoColor=ffffff)
 
 
