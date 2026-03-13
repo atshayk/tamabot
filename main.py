@@ -124,7 +124,8 @@ async def main():
     initial_extensions = [
         'cogs.general',
         'cogs.llm',
-        'cogs.music'
+        'cogs.music',
+        'cogs.steam'  # Added Steam cog
         # 'cogs.admin'  # Uncomment when you create admin.py
     ]
 
