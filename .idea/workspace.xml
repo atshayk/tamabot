@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41fbe785-78a2-4f3b-9f4a-450228ab9e05" name="Changes" comment="Edited a few things">
-      <change afterPath="$PROJECT_DIR$/cogs/news.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/general.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/llm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773330632840</updated>
       <workItem from="1773330633852" duration="17757000" />
-      <workItem from="1773391571733" duration="25935000" />
+      <workItem from="1773391571733" duration="27131000" />
     </task>
     <task id="LOCAL-00001" summary="done">
       <option name="closed" value="true" />

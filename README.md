@@ -1,6 +1,12 @@
 # Tamabot - Discord Bot
 
-A general-purpose, feature-rich Discord bot with AI chat capabilities, music playback, and Steam game information.
+![Python](https://img.shields.io/badge/python-3.13-blue.svg)
+![Mistral](https://img.shields.io/badge/mistral-ai-violet.svg)
+![VERSION](https://img.shields.io/badge/version-0.4.2-green.svg)
+![DISCORD](https://img.shields.io/badge/discord-1f2933?logo=discord&logoColor=ffffff)
+
+
+A general-purpose, feature-rich Discord bot with AI chat capabilities, music playback, Steam game information, and news aggregation.
 
 
 ## Features
@@ -23,6 +29,12 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - View top selling games on Steam
 - Search for specific games on Steam
 - Look up Steam user profiles
+
+### 📰 News Aggregation
+- Top headlines from around the world
+- Technology and business news
+- Search news by keywords
+- News categorized by source
 
 ### More features in active development!
 - Admin actions
@@ -62,7 +74,14 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - `>topgames [limit]` - Show top selling games
 - `>steamstatus` - Check Steam service status
 - `>steamsearch <query>` - Search for games
-- `>steamuser <steam_id>` - Get user info (requires API key)
+- `>steamuser <steam_id>` - Get user info
+
+### News Commands
+- `>news [query]` - Get top headlines or search for news
+- `>newssearch [query]` - Better searching for news
+- `>technews` - Get latest technology news
+- `>businessnews` - Get latest business news
+- `>newsources` - List available news sources
 
 ## Technical Specifications
 
@@ -79,6 +98,7 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - `yt-dlp` - YouTube downloading library
 - `python-dotenv` - Environment variable management
 - `aiohttp` - Asynchronous HTTP requests
+- `newsapi-python` - NewsAPI client
 
 ### Hosting
 - **Render** (Hobby tier)
@@ -98,7 +118,8 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - Discord bot token
 - Mistral AI API key
 - Steam API key
+- NewsAPI key
 
 ---
 
-*Made with ❤️ for Discord communities everywhere!*
+*Made with ❤ by @atshayk*
