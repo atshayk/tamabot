@@ -38,6 +38,14 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - `>info` - Display bot information
 - `>help` - Show all available commands
 
+### AI Chat Commands
+- `@tamabot Hey, who's Newton?` - mention the bot to initiate a conversation!
+- `>ask <question>` - Ask the AI anything
+- `>clear_memory` - Reset your conversation history
+- `>list_models` - See available AI models
+- `>set_model <model>` - Switch AI models
+- `>diagnose_model` - Check AI service status
+
 ### Music Commands
 - `>join` - Join your voice channel
 - `>leave` - Leave the voice channel
@@ -47,13 +55,6 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 - `>resume` - Resume playback
 - `>stop` - Stop playback and clear queue
 - `>queue` - Show current music queue
-
-### AI Chat Commands
-- `>ask <question>` - Ask the AI anything
-- `>clear_memory` - Reset your conversation history
-- `>list_models` - See available AI models
-- `>set_model <model>` - Switch AI models
-- `>diagnose_model` - Check AI service status
 
 ### Steam Commands
 - `>freegames` - Show currently free games
