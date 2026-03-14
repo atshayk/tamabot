@@ -74,7 +74,7 @@ A general-purpose, feature-rich Discord bot with AI chat capabilities, music pla
 ### Steam Commands
 - `>freegames` - Show currently free games
 - `>deals [limit]` - Show discounted games
-- `>topgames [limit]` - Show top selling games
+- `>topgames [limit]` - Show top-selling games
 - `>steamstatus` - Check Steam service status
 - `>steamsearch [query]` - Search for games
 - `>steamuser <steam_id>` - Get user info

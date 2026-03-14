@@ -3,8 +3,6 @@ import discord
 from discord.ext import commands
 import os
 from newsapi.newsapi_client import NewsApiClient
-import asyncio
-import aiohttp
 
 
 class News(commands.Cog):
