@@ -24,28 +24,23 @@ intents.voice_states = True  # Required for music functionality
 bot = commands.Bot(command_prefix='>', intents=intents)
 bot.remove_command("help")
 
-
 @bot.event
 async def on_ready():
     print(f'{bot.user} has logged in!')
     print('Bot is ready to use!')
     print(f'Currently in {len(bot.guilds)} guilds')
 
-
 @bot.event
 async def on_disconnect():
     print("Bot disconnected from Discord. Attempting to reconnect...")
-
 
 @bot.event
 async def on_resumed():
     print("Bot connection resumed!")
 
-
 @bot.event
 async def on_error(event, *args, **kwargs):
     print(f"Bot error in {event}: {sys.exc_info()}")
-
 
 # Error handling
 @bot.event
@@ -66,7 +61,6 @@ async def on_command_error(ctx, error):
     else:
         await ctx.send('An error occurred while processing your command.')
 
-
 async def create_bot_session():
     """Create a custom session with better connection settings"""
     connector = aiohttp.TCPConnector(
@@ -77,7 +71,6 @@ async def create_bot_session():
         ssl=False,  # Disable SSL verification if having SSL issues
     )
     return aiohttp.ClientSession(connector=connector)
-
 
 async def connect_with_retry(bot, token, max_retries=5):
     """Attempt to connect with retry logic and better error handling"""
@@ -109,7 +102,6 @@ async def connect_with_retry(bot, token, max_retries=5):
             continue
     return False
 
-
 # Run the bot and web server
 async def main():
     # Start web server for Render hosting
@@ -126,7 +118,8 @@ async def main():
         'cogs.llm',
         'cogs.music',
         'cogs.steam',
-        'cogs.news'
+        'cogs.news',
+        'cogs.agent'  # Add the agent cog
         # 'cogs.admin' # WIP
     ]
 
@@ -157,7 +150,6 @@ async def main():
         print(f"Failed to start bot: {e}")
         import traceback
         traceback.print_exc()
-
 
 if __name__ == '__main__':
     try:
